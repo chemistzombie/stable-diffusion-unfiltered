@@ -334,7 +334,11 @@ def main():
                     img.save(os.path.join(outpath, f'grid-{grid_count:04}.png'))
                     grid_count += 1
 
-                toc = time.time()
+                image = x_samples_ddim.cpu().permute(0, 2, 3, 1).numpy()
+
+                # run safety checker
+                safety_checker_input = pipe.feature_extractor(numpy_to_pil(image), return_tensors="pt")
+                image, has_nsfw_concept = pipe.safety_checker(images=image, clip_input=safety_checker_input.pixel_values)
 
     print(f"Your samples are ready and waiting for you here: \n{outpath} \n"
           f" \nEnjoy.")
