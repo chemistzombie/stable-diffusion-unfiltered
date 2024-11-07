@@ -1,0 +1,6 @@
+{
+    "github.copilot.chat.inlineChatCompletionTrigger.enabled": true,
+    "github.copilot.chat.inlineChatHint.enabled": true,
+    "chat.editor.lineHeight": 481224283264,
+    "github.copilot.chat.terminalChatLocation": "chatView"
+}
