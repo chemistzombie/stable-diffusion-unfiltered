@@ -1,4 +1,15 @@
 #!/bin/bash
+
+mkdir -p models/first_stage_models/kl-f4
+mkdir -p models/first_stage_models/kl-f8
+mkdir -p models/first_stage_models/kl-f16
+mkdir -p models/first_stage_models/kl-f32
+mkdir -p models/first_stage_models/vq-f4
+mkdir -p models/first_stage_models/vq-f4-noattn
+mkdir -p models/first_stage_models/vq-f8
+mkdir -p models/first_stage_models/vq-f8-n256
+mkdir -p models/first_stage_models/vq-f16
+
 wget -O models/first_stage_models/kl-f4/model.zip https://ommer-lab.com/files/latent-diffusion/kl-f4.zip
 wget -O models/first_stage_models/kl-f8/model.zip https://ommer-lab.com/files/latent-diffusion/kl-f8.zip
 wget -O models/first_stage_models/kl-f16/model.zip https://ommer-lab.com/files/latent-diffusion/kl-f16.zip
